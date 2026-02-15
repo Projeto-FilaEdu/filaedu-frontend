@@ -1,0 +1,69 @@
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+
+            <div class="card dashboard">
+                <div class="card-body">
+
+                    <h3 class="text-white">Dashboard</h3>
+
+                    <br />
+
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                        <div class="col">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Total de Pessoas Hoje</h5>
+                                    <hr>
+                                    <p class="fs-1 fw-bold">{{ totalHoje }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Pico do Dia</h5>
+                                    <hr>
+                                    <b class="fs-4">{{ picoHora }}</b> <br />
+                                    {{ picoTotal }} pessoas
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Hoje vs Ontem</h5>
+                                    <hr>
+                                    <p class="fs-1 fw-bold" [ngClass]="{'text-success': hojeVsOntem >= 0, 'text-danger': hojeVsOntem < 0}">
+                                        {{ hojeVsOntem }}%
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <br>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12 col-lg-6 mb-3">
+                                <div class="card">
+                                    <h5 class="pt-3 ps-3">Movimento por Hora</h5>
+                                    <div class="grafico" echarts [options]="chartOption"></div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="card">
+                                    <h5 class="pt-3 ps-3">Movimento por Dia</h5>
+                                    <div class="grafico" echarts [options]="chartOption2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
