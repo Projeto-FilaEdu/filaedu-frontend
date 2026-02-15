@@ -1,28 +1,98 @@
-# Cadastro
+# FilaEdu Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
+Aplicação web do sistema FilaEdu, responsável pela interface com o usuário para visualização das filas, registros e estatísticas fornecidas pela API REST.
 
-## Development server
+## Descrição
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Este projeto corresponde ao frontend web do FilaEdu, consumindo os endpoints do backend para exibir dados em tempo real, relatórios e informações sobre o andamento das filas de forma clara e intuitiva.
 
-## Code scaffolding
+## Tecnologias
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Angular
+- TypeScript
+- HTML5 / CSS3
+- Node.js
+- npm
 
-## Build
+## Versões utilizadas
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Este projeto foi desenvolvido e testado utilizando as seguintes versões:
 
-## Running unit tests
+- Angular CLI: 17.3.17  
+- Node.js: 20.20.0  
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Recomenda-se utilizar exatamente essas versões para evitar problemas de compatibilidade.
 
-## Running end-to-end tests
+## Pré-requisitos
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Antes de rodar o projeto localmente, certifique-se de ter instalado:
 
-## Further help
+- Node.js
+- npm
+- Git
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-"# filaedu-frontend" 
+Verifique no terminal:
+
+    node -v
+    npm -v
+    ng version
+
+## Clonando o repositório
+
+    git clone https://github.com/Projeto-FilaEdu/filaedu-frontend.git
+
+## Instalação das dependências
+
+Acesse a pasta do projeto e execute:
+
+    npm install
+
+Esse comando irá baixar todas as dependências definidas no projeto.
+
+## Configuração da API Backend
+
+Certifique-se de que o backend esteja rodando localmente (por padrão em `http://localhost:8080`) 
+
+## Importando o projeto na IDE
+
+Você pode utilizar qualquer editor compatível com Angular, como o VS Code.
+
+No VS Code:
+
+1. Abra o VS Code  
+2. Clique em **File > Open Folder**  
+3. Selecione a pasta do projeto (`filaedu-frontend`)  
+4. Aguarde o carregamento das dependências  
+
+## Executando a aplicação
+
+No terminal, dentro da pasta do projeto, execute:
+
+    npm start
+
+ou
+
+    ng serve
+
+A aplicação estará disponível em:
+
+    http://localhost:4200
+
+## Login no sistema
+
+Para acessar o sistema, utilize as credenciais padrão:
+
+- Login: admin  
+- Senha: admin  
+
+Essas credenciais são utilizadas para fins de teste e demonstração do sistema.
+
+## Integração
+
+Este frontend consome os dados fornecidos por:
+
+- FilaEdu Backend (Spring Boot API REST)
+
+E é parte integrante do sistema FilaEdu, junto com:
+
+- FilaEdu Desktop (Java)
